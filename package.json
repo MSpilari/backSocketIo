@@ -1,0 +1,20 @@
+{
+	"name": "backsocketio",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/MSpilari/backSocketIo.git",
+	"author": "MSpilari <mb.spilari@hotmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"dev": "ts-node-dev --ignore-watch node_modules src/app.ts"
+	},
+	"dependencies": {
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.13",
+		"prisma": "^3.4.2",
+		"ts-node-dev": "^1.1.8",
+		"typescript": "^4.4.4"
+	}
+}
