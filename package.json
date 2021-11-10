@@ -6,7 +6,7 @@
 	"author": "MSpilari <mb.spilari@hotmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"dev": "ts-node-dev --ignore-watch node_modules src/app.ts"
+		"dev": "ts-node-dev --exit-child --ignore-watch node_modules src/app.ts"
 	},
 	"dependencies": {
 		"@prisma/client": "^3.4.2",
