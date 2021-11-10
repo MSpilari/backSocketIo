@@ -3,13 +3,17 @@ import { AuthenticateUserService } from '../services/AuthenticateUserService'
 
 class AuthenticateUserController {
 	async handle(req: Request, res: Response) {
-		const service = new AuthenticateUserService()
-
 		const { code } = req.body
 
-		const result = await service.execute(code)
+		const service = new AuthenticateUserService()
 
-		return res.json(result)
+		try {
+			const result = await service.execute(code)
+
+			return res.json(result)
+		} catch (err) {
+			return res.json({ ErrorMessage: err.message })
+		}
 	}
 }
 
